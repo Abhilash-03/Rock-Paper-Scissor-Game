@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, and Scissor Game</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <main class="main">
+        <h2 class="title">Rock, Paper, and Scissor</h2>
+        <div class="winner" id="winner"></div>
+        <div class="score" id="scores">
+            <h3 class="userScore">User Score: <span id="uScore">0</span></h3>
+            <h3 class="compScore">Computer Score: <span id="cScore">0</span></h3>
+        </div>
+     
+        <div class="container">
+           <div class="img1 img" id="rockImg">
+            <img src="assets/img/rock-img.png" width="200" alt="rock-image" onclick="rps_game('rock')">
+            <p>Rock</p>
+           </div>
+           <div class="img2 img" id="paperImg">
+            <img src="assets/img/paper-img.png" width="200" alt="paper-image" onclick="rps_game('paper')">
+            <p>Paper</p>
+           </div>
+           <div class="img3 img" id="scissorImg">
+            <img src="assets/img/scissor-img.png" width="200" alt="scissor-image" onclick="rps_game('scissor')">
+            <p>Scissor</p>
+           </div>
+
+          
+        </div>
+        <div class="user_comp_choice">
+            <p>User Choice: <span id="uc">Rock</span></p>
+            <p>Computer Choice: <span id="cc">Paper</span></p>
+        </div>
+
+        <div class="restart">
+            <i class="fa-sharp fa-solid fa-rotate-right" id="reload"></i>
+            <h3>Reload</h3>
+           </div>
+    </main>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
