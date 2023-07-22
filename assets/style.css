@@ -1,10 +1,3 @@
-.container{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 1rem;
- position: relative;
-}
 
 body{
     background-color: rgba(2, 2, 2, 0.505);
@@ -16,14 +9,24 @@ body{
     background-blend-mode: color-burn;
     color: white;
     background-attachment: fixed;
+
 }
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
+   position: relative;
+  }
+  
 .main{
     text-align: center;
 }
 
 .main h2{
     font-size: 40px;
-    color: white;
+    color: #2dff8b;
 }
 .container .img{
     margin: 3rem 0;
@@ -116,6 +119,63 @@ body{
     color: rgb(235, 70, 144);
 }
 
+.main .choice-img{
+    display: flex;
+    justify-content: space-around;
+    /* margin: 2rem 2rem; */
+
+
+}
+.main .choice-img img{
+    height: 100px;
+    transition: .5s;
+   animation: appear .5s linear;
+}
+
+@keyframes appear {
+    0%{
+        transform: scale(.7);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.whoseWinner{
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.47);
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    color: black;
+    display: none;
+}
+
+.whoseWinner .title h2{
+    color: #3100ff;
+    font-weight: bold;
+}
+
+.whoseWinner h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+
+}
+.whoseWinner .title p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #00034f;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 @media screen and (max-width: 660px) {
     .container .img img{ 
@@ -126,5 +186,16 @@ body{
     .container .img p{
         padding-top: 10px;
         font-size: 14px;
+    }
+
+    .main .choice-img img{
+        width: 80px !important;
+        height: 80px;
+    }
+    .whoseWinner{
+        height: auto;
+        width: 250px;
+        top: 44%;
+        left: 10%;
     }
 }
